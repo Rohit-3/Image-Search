@@ -1,1 +1,5 @@
-Place screenshots and GIFs here: login.png, top-searches.png, search-select.gif, history.png
+Screenshots for:
+OAuth login
+Top Searches banner
+Search results + multi-select
+Search history secti are attached
