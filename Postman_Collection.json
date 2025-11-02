@@ -1,0 +1,241 @@
+{
+	"info": {
+		"name": "MERN Image Search API",
+		"description": "Complete API collection for MERN Image Search application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Check OAuth Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/auth/status",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["auth", "status"]
+						}
+					}
+				},
+				{
+					"name": "Google OAuth Login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/auth/google",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["auth", "google"]
+						},
+						"description": "Redirects to Google OAuth. Use in browser."
+					}
+				},
+				{
+					"name": "GitHub OAuth Login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/auth/github",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["auth", "github"]
+						},
+						"description": "Redirects to GitHub OAuth. Use in browser."
+					}
+				},
+				{
+					"name": "Facebook OAuth Login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/auth/facebook",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["auth", "facebook"]
+						},
+						"description": "Redirects to Facebook OAuth. Use in browser."
+					}
+				},
+				{
+					"name": "Logout",
+					"request": {
+							"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/auth/logout",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["auth", "logout"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "User API",
+			"item": [
+				{
+					"name": "Get Current User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/current_user",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "current_user"]
+						},
+						"description": "Returns current logged-in user or null"
+					}
+				},
+				{
+					"name": "Delete User Data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user-data",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "user-data"]
+						},
+						"description": "Permanently deletes user account and all associated data. Requires authentication."
+					}
+				}
+			]
+		},
+		{
+			"name": "Search API",
+			"item": [
+				{
+					"name": "Get Top Searches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/top-searches",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "top-searches"]
+						},
+						"description": "Returns top 5 most searched terms"
+					}
+				},
+				{
+					"name": "Search Images",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"term\": \"sunset\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/search",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "search"]
+						},
+						"description": "Search for images using Unsplash API. Requires authentication."
+					}
+				},
+				{
+					"name": "Get Search History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/history",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "history"]
+						},
+						"description": "Returns user's search history. Requires authentication."
+					}
+				}
+			]
+		},
+		{
+			"name": "Legal/Information",
+			"item": [
+				{
+					"name": "Privacy Policy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/privacy",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["privacy"]
+						}
+					}
+				},
+				{
+					"name": "Terms of Service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/terms",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["terms"]
+						}
+					}
+				},
+				{
+					"name": "Data Deletion Instructions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/privacy/data-deletion",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["privacy", "data-deletion"]
+						}
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		},
+		{
+			"key": "session_cookie",
+			"value": "YOUR_SESSION_COOKIE_HERE",
+			"type": "string"
+		}
+	]
+}
+
