@@ -518,6 +518,6 @@ Add screenshots/GIFs to `visuals/` directory:
 
 [Your Name]
 
----
+--
 
-**Built with ❤️ using MERN Stack**
+**Built using MERN Stack**
