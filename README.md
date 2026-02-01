@@ -516,7 +516,7 @@ Add screenshots/GIFs to `visuals/` directory:
 
 ## 👤 Author
 
-[Your Name]
+Rohit Kumar
 
 --
 
